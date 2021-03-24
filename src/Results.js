@@ -8,7 +8,11 @@ export default function Results(props) {
         return (
             <div className="Results mt-3">
                 <section>
+                <div className="row">
+                <div className="col-sm-6">
                 <h2>{props.results.word}</h2>
+                </div>
+                <div className="col-sm-6">
                 {props.results.phonetics.map(function(phonetic, index) {
                     return (
                         <div key={index}>
@@ -16,6 +20,8 @@ export default function Results(props) {
                         </div>
                     );
                 })}
+                </div>
+                </div>
                 </section>
                 {props.results.meanings.map(function(meaning, index) {
 
